@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "Collection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "artist": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "location": {
+      "type": "string"
+    },
+    "loan_term": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::loan-term.loan-term",
+      "inversedBy": "collections"
+    },
+    "exhibition_checklist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exhibition-checklist.exhibition-checklist",
+      "inversedBy": "collections"
+    },
+    "condition_reports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::condition-report.condition-report",
+      "mappedBy": "collection"
+    }
+  }
+}

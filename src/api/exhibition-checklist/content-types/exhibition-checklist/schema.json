@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exhibition_checklists",
+  "info": {
+    "singularName": "exhibition-checklist",
+    "pluralName": "exhibition-checklists",
+    "displayName": "Exhibition Checklist"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "checklist": {
+      "type": "component",
+      "repeatable": true,
+      "component": "checklist.item"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "exhibition_checklist"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "condition_reports",
+  "info": {
+    "singularName": "condition-report",
+    "pluralName": "condition-reports",
+    "displayName": "Condition Report"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "report": {
+      "type": "richtext"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "author": {
+      "type": "string"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "condition_reports"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loan_terms",
+  "info": {
+    "singularName": "loan-term",
+    "pluralName": "loan-terms",
+    "displayName": "Loan Term"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "loan_term"
+    }
+  }
+}
